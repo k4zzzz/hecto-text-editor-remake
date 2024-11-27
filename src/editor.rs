@@ -15,10 +15,9 @@ impl Editor {
             match b {
                 Ok(b) => {
                     let c = b as char;
-                    if c.is_control {
+                    if c.is_control() {
                         println!("Binary: {0:08b} ASCII: {0:#03} \r", b);
-                        }
-                        else {
+                        } else {
                             println!("Binary: {0:08b} ASCII: {0:#03} Character: {1:#?}\r", b, c);
                         }
                         if c == 'q' {
